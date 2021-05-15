@@ -44,7 +44,7 @@ export const Announcements: React.FC = () => {
                   </Button>
                 </Grid>
                 <Grid container justify='flex-end' item xs={6} md={6}>
-                  <Link to={`/announcements/${post.id}`}>
+                  <Link to={`/announcement/${post.id}`}>
                     <Button color='primary'>more...</Button>
                   </Link>
                 </Grid>

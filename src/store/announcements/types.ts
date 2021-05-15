@@ -7,7 +7,7 @@ export enum EnumAnnouncementsActionType {
 }
 
 export interface IAnnouncement {
-  id: number
+  id: string
   title: string
   description: string
   date: Date
@@ -32,7 +32,7 @@ export interface IEditAnnouncementAction extends Action<EnumAnnouncementsActionT
 export interface ISetDeleteAnnouncementAction
   extends Action<EnumAnnouncementsActionType> {
   type: EnumAnnouncementsActionType.DELETE
-  payload: number
+  payload: string
 }
 
 export type AnnouncementsActionT =

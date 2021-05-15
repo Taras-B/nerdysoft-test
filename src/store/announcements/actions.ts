@@ -16,7 +16,7 @@ export const actionsAnnouncements = {
     type: EnumAnnouncementsActionType.ADD,
     payload,
   }),
-  delete: (payload: number): ISetDeleteAnnouncementAction => ({
+  delete: (payload: string): ISetDeleteAnnouncementAction => ({
     type: EnumAnnouncementsActionType.DELETE,
     payload,
   }),

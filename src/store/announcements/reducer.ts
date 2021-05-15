@@ -7,31 +7,31 @@ import {
 const initialState: IAnnouncementsState = {
   announcements: [
     {
-      id: 1,
+      id: '1',
       title: ' Why do we use it? ',
       description: ' It is sj a long. ',
       date: new Date(),
     },
     {
-      id: 2,
+      id: '2',
       title: ' What is Lorem Ipsum? ',
       description: 'Lorem7777  88554 Lorem Ipsum  ',
       date: new Date(),
     },
     {
-      id: 3,
+      id: '3',
       title: ' Why Learn ReactJS? ',
       description: ' React  offers ',
       date: new Date(),
     },
     {
-      id: 4,
+      id: '4',
       title: ' What is Lorem Ipsum ',
       description: ' Lore dfg dfg dfg  Ipsum ',
       date: new Date(),
     },
     {
-      id: 5,
+      id: '5',
       title: ' What is Lorem Ipsum ',
       description: ' Lo777rem Ipsum ',
       date: new Date(),
@@ -63,7 +63,11 @@ export const announcementsReducer = (
         ...state,
         announcements: [
           ...state.announcements,
-          { ...action.payload, id: 3, date: new Date() },
+          {
+            ...action.payload,
+            id: Math.random().toString(36).substr(2, 9),
+            date: new Date(),
+          },
         ],
       }
     case EnumAnnouncementsActionType.DELETE:

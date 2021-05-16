@@ -9,7 +9,7 @@ import { makeStore } from './store'
 import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
-  <BrowserRouter basename='nerdysoft-test'>
+  <BrowserRouter basename='/nerdysoft-test'>
     <Provider store={makeStore}>
       <App />
     </Provider>

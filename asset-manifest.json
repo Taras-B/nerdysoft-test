@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nerdysoft-test/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/nerdysoft-test/static/js/main.6d0c8acf.chunk.js",
-    "main.js.map": "/nerdysoft-test/static/js/main.6d0c8acf.chunk.js.map",
+    "main.js": "/nerdysoft-test/static/js/main.76cf245f.chunk.js",
+    "main.js.map": "/nerdysoft-test/static/js/main.76cf245f.chunk.js.map",
     "runtime-main.js": "/nerdysoft-test/static/js/runtime-main.1310cd5b.js",
     "runtime-main.js.map": "/nerdysoft-test/static/js/runtime-main.1310cd5b.js.map",
     "static/js/2.7f39eca4.chunk.js": "/nerdysoft-test/static/js/2.7f39eca4.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1310cd5b.js",
     "static/js/2.7f39eca4.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.6d0c8acf.chunk.js"
+    "static/js/main.76cf245f.chunk.js"
   ]
 }

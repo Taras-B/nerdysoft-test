@@ -4,6 +4,7 @@ export enum EnumAnnouncementsActionType {
   ADD = 'announcements/ADD_ANNOUNCEMENTS',
   EDIT = 'announcements/EDIT_ANNOUNCEMENT',
   DELETE = 'announcements/DELETE_ANNOUNCEMENTS',
+  SEARCH = 'announcements/SEARCH_ANNOUNCEMENTS',
 }
 
 export interface IAnnouncement {
@@ -14,6 +15,7 @@ export interface IAnnouncement {
 }
 export interface IAnnouncementsState {
   announcements: IAnnouncement[]
+  searchText: string | null
 }
 
 // Action type
@@ -35,7 +37,14 @@ export interface ISetDeleteAnnouncementAction
   payload: string
 }
 
+// Search Announcements Action Type
+export interface ISearchAnnouncementAction extends Action<EnumAnnouncementsActionType> {
+  type: EnumAnnouncementsActionType.SEARCH
+  payload: string
+}
+
 export type AnnouncementsActionT =
   | ISetAddAnnouncementAction
   | ISetDeleteAnnouncementAction
   | IEditAnnouncementAction
+  | ISearchAnnouncementAction

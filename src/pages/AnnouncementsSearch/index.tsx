@@ -3,31 +3,28 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import Grid from '@material-ui/core/Grid'
 
-import { selectAnnouncements } from '../../store/announcements/selectors'
+import { getSearchAnnouncements } from '../../store/announcements/selectors'
 import { actionsAnnouncements } from '../../store/announcements/actions'
-import { CustomForm } from '../../components/CustomForm/CustomForm'
+
 import { AnnouncementItem } from '../../components/AnnouncementItem/AnnouncementItem'
 
-export const Announcements: React.FC = () => {
+export const AnnouncementsSearch: React.FC = () => {
   const dispatch = useDispatch()
-  const announcements = useSelector(selectAnnouncements)
 
-  const addAnnouncementsWithForm = useCallback(
-    ({ title, description }) => {
-      dispatch(actionsAnnouncements.add({ title, description }))
-    },
-    [dispatch]
-  )
+  const announcementsSearch = useSelector(getSearchAnnouncements)
+
   const deleteAnnouncement = useCallback(
     (id: string) => {
       dispatch(actionsAnnouncements.delete(id))
     },
     [dispatch]
   )
+  if (!announcementsSearch || announcementsSearch.length === 0)
+    return <div> no yet this announcement</div>
 
   return (
     <Grid container spacing={4}>
-      {announcements.map((post) => (
+      {announcementsSearch.map((post) => (
         <AnnouncementItem
           deleteAnnouncement={deleteAnnouncement}
           title={post.title}
@@ -36,10 +33,6 @@ export const Announcements: React.FC = () => {
           id={post.id}
         />
       ))}
-
-      <Grid container justify='center' item>
-        <CustomForm buttonName='Add' addPost={addAnnouncementsWithForm} />
-      </Grid>
     </Grid>
   )
 }

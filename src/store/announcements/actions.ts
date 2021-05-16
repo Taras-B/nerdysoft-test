@@ -1,6 +1,7 @@
 import {
   EnumAnnouncementsActionType,
   IEditAnnouncementAction,
+  ISearchAnnouncementAction,
   ISetAddAnnouncementAction,
   ISetDeleteAnnouncementAction,
   PayloadAddToAnnouncements,
@@ -18,6 +19,10 @@ export const actionsAnnouncements = {
   }),
   delete: (payload: string): ISetDeleteAnnouncementAction => ({
     type: EnumAnnouncementsActionType.DELETE,
+    payload,
+  }),
+  setSearch: (payload: string): ISearchAnnouncementAction => ({
+    type: EnumAnnouncementsActionType.SEARCH,
     payload,
   }),
 }

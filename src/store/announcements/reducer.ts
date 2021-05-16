@@ -37,6 +37,7 @@ const initialState: IAnnouncementsState = {
       date: new Date(),
     },
   ],
+  searchText: null,
 }
 
 export const announcementsReducer = (
@@ -74,6 +75,11 @@ export const announcementsReducer = (
       return {
         ...state,
         announcements: state.announcements.filter((ann) => ann.id !== action.payload),
+      }
+    case EnumAnnouncementsActionType.SEARCH:
+      return {
+        ...state,
+        searchText: action.payload,
       }
 
     default:

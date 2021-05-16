@@ -23,7 +23,6 @@ export const CustomForm: React.FC<IProps> = ({
     values: PayloadAddToAnnouncements,
     actions: FormikHelpers<PayloadAddToAnnouncements>
   ) => {
-    console.log(values)
     addPost(values)
     actions.resetForm()
   }

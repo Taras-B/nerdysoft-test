@@ -1,13 +1,16 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom'
-// import { useDispatch, useSelector } from 'react-redux'
+import { NavLink, Link, useHistory } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { Formik, Form, FormikHelpers, useFormik } from 'formik'
 
+import TextField from '@material-ui/core/TextField'
 import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
+import { actionsAnnouncements } from '../../store/announcements/actions'
 
 const useStyles = makeStyles({
   root: {
@@ -35,15 +38,24 @@ const useStyles = makeStyles({
 
 export const Header: React.FC = () => {
   const classes = useStyles()
-  //   const dispatch = useDispatch()
-
-  const onClickLogout = () => {}
+  const history = useHistory()
+  const dispatch = useDispatch()
+  const formik = useFormik({
+    initialValues: {
+      searchText: '',
+    },
+    onSubmit: (values) => {
+      dispatch(actionsAnnouncements.setSearch(values.searchText))
+      history.push('/search')
+    },
+  })
+  
   return (
     <div className={classes.root}>
       <AppBar position='static'>
         <Toolbar>
-          <Grid container direction='row' spacing={4}>
-            <Grid item xs={10} className={classes.title}>
+          <Grid container direction='row' spacing={4} alignItems='center'>
+            <Grid item xs={12} md={7} className={classes.title}>
               <Typography variant='h6'>
                 <NavLink
                   activeClassName={classes.navLinkActive}
@@ -54,14 +66,28 @@ export const Header: React.FC = () => {
                 </NavLink>
               </Typography>
             </Grid>
-            <Grid item xs={2} container justify='flex-end'>
-              <Grid item>
-                <Button color='inherit' onClick={onClickLogout}>
-                  <Link to='/' className={classes.navLink}>
-                    Search
-                  </Link>
-                </Button>
-              </Grid>
+            <Grid item xs={12} md={5}>
+              <form onSubmit={formik.handleSubmit}>
+                <Grid container justify='center' alignItems='center'>
+                  <Grid item xs={8}>
+                    <TextField
+                      onChange={formik.handleChange}
+                      value={formik.values.searchText}
+                      label='Search'
+                      name='searchText'
+                      variant='outlined'
+                      fullWidth
+                      margin='normal'
+                      required={true}
+                    />
+                  </Grid>
+                  <Grid item xs={4}>
+                    <Button color='inherit' type='submit'>
+                      Search
+                    </Button>
+                  </Grid>
+                </Grid>
+              </form>
             </Grid>
           </Grid>
         </Toolbar>

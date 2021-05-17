@@ -14,7 +14,7 @@ const initialState: IAnnouncementsState = {
     },
     {
       id: '2',
-      title: ' What is Lorem Ipsum? ',
+      title: ' What is JavaScript? ',
       description: 'Lorem7777  88554 Lorem Ipsum  ',
       date: new Date(),
     },
@@ -26,13 +26,13 @@ const initialState: IAnnouncementsState = {
     },
     {
       id: '4',
-      title: ' What is Lorem Ipsum ',
+      title: ' What is Angular? ',
       description: ' Lore dfg dfg dfg  Ipsum ',
       date: new Date(),
     },
     {
       id: '5',
-      title: ' What is Lorem Ipsum ',
+      title: ' What is Vue ',
       description: ' Lo777rem Ipsum ',
       date: new Date(),
     },

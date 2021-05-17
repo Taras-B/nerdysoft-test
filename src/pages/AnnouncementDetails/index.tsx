@@ -41,6 +41,11 @@ export const AnnouncementDetails: React.FC = () => {
               <Typography variant='h6'>{announcement.title}</Typography>
               <Divider />
               <Typography>{announcement.description}</Typography>
+              <Divider />
+              <Typography>
+                Created:
+                {new Intl.DateTimeFormat('ua-UA').format(new Date(announcement.date))}
+              </Typography>
             </Grid>
             <Grid item xs={12}>
               <Button variant='outlined' color='primary' onClick={() => setOpen(!open)}>

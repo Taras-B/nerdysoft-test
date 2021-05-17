@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/nerdysoft-test/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/nerdysoft-test/static/js/main.76cf245f.chunk.js",
-    "main.js.map": "/nerdysoft-test/static/js/main.76cf245f.chunk.js.map",
+    "main.js": "/nerdysoft-test/static/js/main.185ac73e.chunk.js",
+    "main.js.map": "/nerdysoft-test/static/js/main.185ac73e.chunk.js.map",
     "runtime-main.js": "/nerdysoft-test/static/js/runtime-main.1310cd5b.js",
     "runtime-main.js.map": "/nerdysoft-test/static/js/runtime-main.1310cd5b.js.map",
-    "static/js/2.7f39eca4.chunk.js": "/nerdysoft-test/static/js/2.7f39eca4.chunk.js",
-    "static/js/2.7f39eca4.chunk.js.map": "/nerdysoft-test/static/js/2.7f39eca4.chunk.js.map",
+    "static/js/2.71cc056e.chunk.js": "/nerdysoft-test/static/js/2.71cc056e.chunk.js",
+    "static/js/2.71cc056e.chunk.js.map": "/nerdysoft-test/static/js/2.71cc056e.chunk.js.map",
     "static/js/3.0e4762a3.chunk.js": "/nerdysoft-test/static/js/3.0e4762a3.chunk.js",
     "static/js/3.0e4762a3.chunk.js.map": "/nerdysoft-test/static/js/3.0e4762a3.chunk.js.map",
     "index.html": "/nerdysoft-test/index.html",
     "static/css/main.8c8b27cf.chunk.css.map": "/nerdysoft-test/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.7f39eca4.chunk.js.LICENSE.txt": "/nerdysoft-test/static/js/2.7f39eca4.chunk.js.LICENSE.txt"
+    "static/js/2.71cc056e.chunk.js.LICENSE.txt": "/nerdysoft-test/static/js/2.71cc056e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1310cd5b.js",
-    "static/js/2.7f39eca4.chunk.js",
+    "static/js/2.71cc056e.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.76cf245f.chunk.js"
+    "static/js/main.185ac73e.chunk.js"
   ]
 }
